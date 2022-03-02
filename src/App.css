@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  resize: none;
+  outline: none;
+}
+
+.loader {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  border: 3px solid #333;
+  border-top: 3px solid #630a63;
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.app {
+  background-color: #7162d8;
+  padding: 5rem 4%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  background-color: #FFFFFF10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.addPost h2{
+  margin-top: 1rem;
+  color:#FFF;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+header .set-postArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+header .set-postArea .box {
+  color: #000;
+  width: 250px;
+  padding: .4rem;
+}
+
+header .set-postArea .title {
+  text-transform: uppercase;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+header .set-postArea .body {
+  text-transform: uppercase;
+  height: 20vh;
+}
+
+header .set-postArea .btn {
+  padding: .4rem 1rem;
+  text-transform: uppercase;
+  background-color: #493779;
+  color: #FFF;
+  font-weight: 600;
+  width: 180px;
+  border-radius: .5rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.postArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.postArea .posts {
+  background-color: #FFF;
+  border: .2rem solid #000;
+  border-bottom: .6rem solid #6a7cb1;
+  padding: 15px;
+  width: 100%;
+}
+
+.postArea .posts h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.postArea .posts .content {
+  padding-bottom: .4rem;
+  border-bottom: .1rem solid #ccc;
+}
+
+.postArea .posts .content span {
+  font-size: 1rem;
+  color: #C4c4c4;
+  margin-right: 1rem;
+}
+
+.postArea .posts p {
+  margin-top: 1rem;
+}
